@@ -1,0 +1,334 @@
+/**
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * Layout SCSS.
+ */
+
+
+/* Import of variables created for site */
+@import "globals/_variable.scss";
+@import "globals/_header.scss";
+@import "globals/_footer.scss";
+@import "components/_fonts.scss";
+@import "layout/_forms.scss";
+/* Import to provide cross-browser mixins for CSS properties introduced in CSS3 */
+//@import "compass/css3";
+
+body {
+  font-family: $lato;
+  font-size: 17px;
+}
+.pb20 {
+  padding-bottom: 20px;
+}
+.container-lg.container {
+  max-width: 850px;
+  width: 100%;
+}
+a,
+.btn {
+  outline: none;
+  &:focus {
+    outline: none;
+  }
+}
+.txt-center {
+  text-align: center;
+}
+.border-b {
+  border-bottom: 1px solid $gray;
+}
+.pd-lft {
+  padding-left: 7px;
+}
+.pd-rght {
+  padding-right: 7px;
+}
+
+
+/**
+ * Main content
+ */
+.main-container {
+  padding-top: 100px;
+}
+
+/* Title content */
+.title-info {
+  margin: 110px auto 60px;
+  .title {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+  h1 {
+    display: inline-block;
+    margin: 0 0 20px;
+    padding: 0 0 25px;
+    background-image: url('../images/green-line.png');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 227px 7px;
+    color: $black;
+    font-family: $lato-black;
+    font-size: 47px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+.title-info .title-text {
+  color: $black;
+  font-family: $lato-light;
+  font-size: 48px;
+}
+/* End */
+
+/* Wrap content*/
+.content-section {
+  margin: 0 0 70px;
+  .wrap-tab {
+    padding-bottom: 10px;
+  }
+  .collapse {
+      @include transition(all 1s ease);
+  }
+  .arrow {
+    float: right;
+  }
+}
+.wrap-link {
+  .link-icon {
+    float: right;
+  }
+  .expand-link {
+    display: inline-block;
+    width: 100%;
+    padding: 23px 0 17px;
+    background-color: $green;
+    color: $white;
+    font-family: $lato-light;
+    font-size: 48px;
+    line-height: normal;
+    text-decoration: none;
+    vertical-align: middle;
+    .arrow:after {
+      display:inline-block;
+
+      height: 32px;
+      width: 32px;
+      background-image: url('../images/cross.png');
+      content: "";
+    }
+    &.collapsed {
+      background-color: transparent;
+      color: $black;
+      &:hover {
+        background-color: $green;
+        text-decoration: none;
+        color: $white;
+      }
+      .arrow:after {
+        width: 45px;
+        background-image: url('../images/arrow.png');
+      }
+       &:hover {
+        .arrow:after {
+          background-image: url('../images/arrow-white.png');
+        }
+      }
+    }
+  }
+}
+.collapse-content {
+  padding: 50px 0;
+}
+.collapse-slider {
+  padding: 10px 0 0 0;
+  background-color: $black-light;
+  color: $white;
+  font-size: 18px;
+}
+.content-info {
+  margin: 0;
+  padding: 30px 0;
+  font-family: $lato-light;
+  font-size: 20px;
+}
+.wrap-info {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 40px;
+  .column {
+    float: left;
+    display: inline-block;
+    width: 40%;
+    font-family: $lato-light;
+    &.for {
+      width: 60%;
+    }
+    .col-th {
+      padding-bottom: 5px;
+      color: $black;
+      font-family: $lato-black;
+      font-size: 18px;
+      line-height: normal;
+    }
+  }
+}
+
+.contact-email {
+  a {
+    display: inline-block;
+    padding: 25px 0 0;
+    color: $black;
+    border-bottom: 1px solid $black;
+    font-family: $lato-light;
+    font-size: 48px;
+    line-height: 44px;
+    text-decoration: none;
+    text-transform: capitalize;
+  }
+}
+/* End */
+
+/* Slider design */
+.slider-tab {
+  padding-bottom: 20px;
+  border:0;
+  text-align: center;
+  .slider-item {
+    float: none;
+    display: inline-block;
+    a {
+      border: 0;
+      background-color: transparent;
+      opacity: 0.5;
+      &.active {
+        border: 0;
+        background-color: transparent;
+        opacity: 1;
+        &:hover,
+        &:focus,
+        &:active {
+          border: 0;
+          background-color: transparent;
+          opacity: 1;
+        }
+      }
+      &:hover {
+        border: 0;
+        background-color: transparent;
+        opacity: 1;
+      }
+    }
+  }
+}
+.tab-content {
+  text-align: center;
+  .frame-slide {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    border-color: $gray;
+    border-width: 40px 40px 35px 40px;
+    border-style: solid;
+    @include border-radius(24px 24px 0 0);
+    .frame-header {
+      .fbtn {
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        display: inline-block;
+        height: 9px;
+        width: 9px;
+        margin: 1px 0 0 -5px;
+        padding: 0;
+        background-color: $black;
+        vertical-align: middle;
+        @include border-radius(1000px);
+      }
+    }
+    .frame-footer {
+      .lbl {
+        position: absolute;
+        bottom: -35px;
+        left: 50%;
+        display: inline-block;
+        margin: 0 0 0 -40px;
+        padding: 0;
+        color: $black;
+        vertical-align: middle;
+        font-size: 14px;
+      }
+    }
+  }
+  .outer-frame {
+    padding: 3px 3px 0 3px;
+    border: 2px solid $gray;
+    border-bottom: 0;
+    @include border-radius(29px 29px 0 0);
+  }
+  .mob {
+    .frame-slide {
+      border-width: 25px 25px 20px;
+    }
+    .frame-footer .lbl {
+      bottom: -22px;
+      font-size: 12px;
+    }
+  }
+}
+.tablet.outer-frame {
+  display: inline-block;
+  max-width: 750px;
+  width: 100%;
+}
+.mob.outer-frame {
+  display: inline-block;
+  max-width: 360px;
+  width: 100%;
+}
+.slide-item img {
+  display: inline-block !important;
+}
+/* End */
+
+
+/**
+ * Responsive design
+ */
+
+@media screen and (max-width: $mobile) {
+/* --- Mobile landscape & portrait view (max-width: 767) --- */
+  .wrap-link .expand-link,
+  .contact-email a {
+    font-size: 28px;
+  }
+  .wrap-info .column {
+    width: 100%;
+  }
+  .title-info .title-text {
+    font-size: 28px;
+  }
+  .title-info h1 {
+    font-size: 27px;
+  }
+} /* 767 */
+
+@media screen and (max-width: $mobile-portrait) {
+/* --- Mobile portrait view only (max-width: 480) --- */
+  .contact-email a {
+    font-size: 20px;
+  }
+  .tab-content {
+    .frame-slide {
+      border-width: 25px 25px 20px;
+      .frame-footer .lbl {
+        bottom: -22px;
+        font-size: 12px;
+      }
+    }
+  }
+} /* 480 */
+/* End */

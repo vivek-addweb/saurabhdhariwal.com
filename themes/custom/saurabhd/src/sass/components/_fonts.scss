@@ -1,0 +1,31 @@
+/**
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * All fonts used in SCSS are defined in this file.
+ */
+
+
+/* Lato fonts */
+@font-face {
+  font-family: $lato;
+  src: $url_lato;
+}
+@font-face {
+  font-family: $lato-bold;
+  src: $url_lato-bold;
+}
+@font-face {
+  font-family: $lato-light;
+  src: $url_lato-light;
+}
+@font-face {
+  font-family: $lato-black;
+  src: $url_lato-black;
+}
+
+/* OpenSans fonts */
+@font-face {
+  font-family: $OpenSans-Light;
+  src: $url_OpenSans_Light;
+}

@@ -1,0 +1,85 @@
+/**
+ * @file
+ * SCSS file for variables.
+ *
+ * All variables used in SCSS are defined in this file.
+ */
+
+
+/**
+ * Font face
+ */
+$lato: lato;
+$lato-bold: lato-bold;
+$lato-light: lato-light;
+$lato-black: lato-black;
+$OpenSans_Light: OpenSans-Light;
+
+
+/**
+ * URLs
+ */
+
+/* Lato font */
+$url_lato: url('../fonts/lato/Lato-Regular.woff');
+$url_lato-bold: url('../fonts/lato/Lato-Bold.woff');
+$url_lato-light: url('../fonts/lato/Lato-Light.woff');
+$url_lato-black: url('../fonts/lato/Lato-Black.woff');
+
+/* Openscans */
+$url_OpenSans_Light: url('../fonts/OpenSans-Light.woff');
+
+/* Color code */
+$white: #fff;
+$black: #000;
+$black-light: #292929;
+$green: #4bab47;
+$gray: #ccc;
+$light-green: #69b923;
+
+
+/**
+ * Media query ( for responsive design )
+ */
+$small-desktop: 1200px;
+$ipad: 1024x;
+$ipad-portrait: 992px;
+$mobile: 767px;
+$mobile-landscape: 600px;
+$mobile-portrait: 480px;
+$small-mobile-portrait: 360px;
+/* End */
+
+/* Mixin - groups of css declarations */
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin box-shadow($value) {
+  -webkit-box-shadow: $value;
+     -moz-box-shadow: $value;
+      -ms-box-shadow: $value;
+          box-shadow: $value;
+}
+@mixin appearance($value) {
+  -webkit-appearance: $value;
+     -moz-appearance: $value;
+      -ms-appearance: $value;
+          appearance: $value;
+  -webkit-user-select: $value;
+     -moz-user-select: $value;
+}
+@mixin transform($deg) {
+  -webkit-transform: $deg;
+     -moz-transform: $deg;
+      -ms-transform: $deg;
+          transform: $deg;
+}
+@mixin transition($value) {
+  -webkit-transition: $value;
+     -moz-transition: $value;
+      -ms-transition: $value;
+          transition: $value;
+}

@@ -1,0 +1,15 @@
+name: saurabhd
+description: 'One page theme'
+type: theme
+core: '8.x'
+
+# Define regions
+regions:
+  header: 'Header'
+  content: 'Main content'
+  content_bottom: 'Content Bottom'
+  footer: 'Footer'
+
+libraries:
+  - saurabhd/global-css
+  - saurabhd/global-js

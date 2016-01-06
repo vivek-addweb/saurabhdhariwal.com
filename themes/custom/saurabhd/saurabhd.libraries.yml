@@ -1,0 +1,16 @@
+global-css:
+  css:
+    theme:
+      css/style.css: {}
+      css/bootstrap.css: {}
+
+global-js:
+  js:
+    js/custom.js: {}
+  dependencies:
+    - saurabhd/jquery
+
+jquery:
+  js:
+    js/jquery.min.js: {}
+    js/bootstrap.js: {}

@@ -1,0 +1,117 @@
+/**
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * Form SCSS
+ */
+
+/* Button design */
+.btn-eff {
+  position: relative;
+  display: inline-block;
+  padding: 6px 15px 3px;
+  border: 1px solid $black;
+  color: $green;
+  font-family: $lato-black;
+  font-size: 22px;
+  line-height: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  vertical-align: middle;
+  text-align: center;
+  @include transition(all 0.3s ease 0s);
+  &.active {
+    display: inline-block;
+    padding-right: 50px;
+    background-image: url("../images/down-arrow.png");
+    background-position: right 15px center;
+    background-repeat: no-repeat;
+    background-size: 20px 12px;
+    content: "";
+    &:hover {
+      z-index: 999;
+      background-image: url("../images/down-arrow-white.png");
+    }
+  }
+  &:hover {
+    z-index: 1;
+    color: $white;
+    text-decoration: none;
+  }
+  &:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    height: 100%;
+    width: 0;
+    background-color: $green;
+    content: "";
+    opacity: 0;
+    @include transform(translateX(-50%) translateY(-50%));
+    @include transition(all 0.5s ease 0s);
+  }
+  &:hover:after {
+    width: 100%;
+    opacity: 1;
+  }
+  &:focus {
+    background-color: $green;
+    color: $white;
+    text-decoration: none;
+  }
+}
+/* End */
+
+.btn-label {
+  position: relative;
+  display: inline-block;
+  min-height: 0;
+  height: 34px;
+  min-width: 150px;
+  max-width: unset;
+  padding: 6px 0;
+  border: 0;
+  background-color: $light-green;
+  color: $white;
+  font-size: 18px;
+  font-family: $lato-bold;
+  font-style: italic;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: normal;
+  @include border-radius(0);
+  &:hover,
+  &:focus {
+    text-decoration:none;
+    color: $white;
+    outline: none;
+    opacity: 0.8;
+  }
+  &:after {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    float: right;
+    right: 0;
+    height: 34px;
+    width: 19px;
+    margin: -17px -19px 0 0;
+    background: url("../images/green-right-arrow.png");
+    content:"";
+  }
+  &:before {
+    position: absolute;
+    float: left;
+    top: 50%;
+    left: 0;
+    display: inline-block;
+    height: 34px;
+    width: 19px;
+    margin: -17px 0 0 -19px;
+    background: url("../images/green-left-arrow.png");
+    content:"";
+  }
+}
+/* End */

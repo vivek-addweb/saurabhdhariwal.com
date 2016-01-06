@@ -1,0 +1,104 @@
+/**
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * Header SCSS.
+ */
+
+$assets_path: "../..";
+/* Import to basic elements created for site */
+@import "../components/_fonts.scss";
+@import "_variable.scss";
+
+/**
+ * Header
+ */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  height: 100px;
+  width: 100%;
+  padding: 20px 60px 20px 40px;
+  background-color: $white;
+}
+.navbar-header {
+  float: left;
+  .logo {
+    text-decoration: none;
+    line-height: normal;
+    .logo-txt {
+      color: $black;
+      font-size: 30px;
+      line-height: normal;
+    }
+    .sml-logo-txt {
+      margin-top: -5px;
+      color: $green;
+      font-size: 14px;
+      text-align: right;
+      line-height: normal;
+    }
+  }
+}
+.social-media {
+  float: right;
+  padding: 0;
+    li {
+    display: inline-block;
+    padding: 0 3px;
+      a {
+        display: inline-block;
+        height: 22px;
+        width: 22px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        color: $black;
+        text-transform: uppercase;
+        text-decoration: none;
+        text-indent: -9999px;
+        &:hover {
+         @include transform(scale(1.2));
+        }
+      }
+    &.blog-li a {
+      display: inline-block;
+      width: auto;
+      text-indent: 1px;
+      font-size: 15px;
+      line-height: normal;
+      vertical-align: top;
+      &:hover {
+        color: $green;
+        @include transform(scale(1));
+      }
+    }
+    &.twit-li a {
+      background-image: url('../images/twitter-icon.png');
+    }
+    &.linkedin-li a {
+      background-image: url('../images/likedin-icon.png');
+    }
+    &.d8-li a {
+      background-image: url('../images/drupal8-icon.png');
+    }
+  }
+}
+/* End */
+
+
+/**
+ * Responsive design
+ */
+@media screen and (max-width: $mobile-portrait) {
+/* --- Mobile portrait view only (max-width: 480) --- */
+  .navbar {
+    height: 120px;
+    padding-right: 40px;
+  }
+  .social-media {
+    float: left;
+    padding-top: 10px;
+  }
+} /* 480 */
