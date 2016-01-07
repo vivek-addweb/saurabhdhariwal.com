@@ -14,13 +14,16 @@ $assets_path: "../..";
 /**
  * Footer design
  */
-.footer {
-  text-align: center;
-  p {
+footer {
+  margin: 70px 0 0;
+  h6 {
     display: inline-block;
+    width: 100%;
+    margin: 70px 0 20px 0;
     font-family: $OpenSans-Light;
     font-size: 22px;
     vertical-align: top;
+    text-align: center;
   }
   img {
     display: inline-block;

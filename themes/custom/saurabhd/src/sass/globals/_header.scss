@@ -18,12 +18,12 @@ $assets_path: "../..";
   top: 0;
   left: 0;
   z-index: 999;
-  height: 100px;
+  /*height: 100px;*/
   width: 100%;
   padding: 20px 60px 20px 40px;
   background-color: $white;
 }
-.navbar-header {
+#block-saurabhd-branding {
   float: left;
   .logo {
     text-decoration: none;
@@ -45,6 +45,7 @@ $assets_path: "../..";
 .social-media {
   float: right;
   padding: 0;
+  margin: 0;
     li {
     display: inline-block;
     padding: 0 3px;
@@ -96,9 +97,16 @@ $assets_path: "../..";
   .navbar {
     height: 120px;
     padding-right: 40px;
+    text-align: center;
+  }
+  .navbar-header {
+    float: none;
+    display: inline-block;
+    width: 100%;
   }
   .social-media {
-    float: left;
+    float: none;
+    display: inline-block;
     padding-top: 10px;
   }
 } /* 480 */
