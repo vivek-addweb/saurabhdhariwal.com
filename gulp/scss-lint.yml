@@ -102,19 +102,21 @@ linters:
     enabled: true
     order:
       - position
+      - float
+      - clear
       - top
-      - bottom
       - right
+      - bottom
       - left
+      - direction
       - z-index
       - display
-      - float
-      - width
+      - max-height
+      - min-height
       - height
       - max-width
-      - max-height
       - min-width
-      - min-height
+      - width
       - margin
       - margin-top
       - margin-right
@@ -135,6 +137,45 @@ linters:
       - overflow-y
       - clip
       - clear
+      - border
+      - border-collapse
+      - border-top
+      - border-right
+      - border-bottom
+      - border-left
+      - border-color
+      - border-image
+      - border-top-color
+      - border-right-color
+      - border-bottom-color
+      - border-left-color
+      - border-spacing
+      - border-style
+      - border-top-style
+      - border-right-style
+      - border-bottom-style
+      - border-left-style
+      - border-width
+      - border-top-width
+      - border-right-width
+      - border-bottom-width
+      - border-left-width
+      - border-radius
+      - border-top-right-radius
+      - border-bottom-right-radius
+      - border-bottom-left-radius
+      - border-top-left-radius
+      - border-radius-topright
+      - border-radius-bottomright
+      - border-radius-bottomleft
+      - border-radius-topleft
+      - background
+      - background-attachment
+      - background-color
+      - background-image
+      - background-position
+      - background-repeat
+      - background-size
       - color
       - font
       - font-size
@@ -207,45 +248,6 @@ linters:
       - set-link-source
       - unicode-bidi
       - speak
-      - border
-      - border-collapse
-      - border-top
-      - border-right
-      - border-bottom
-      - border-left
-      - border-color
-      - border-image
-      - border-top-color
-      - border-right-color
-      - border-bottom-color
-      - border-left-color
-      - border-spacing
-      - border-style
-      - border-top-style
-      - border-right-style
-      - border-bottom-style
-      - border-left-style
-      - border-width
-      - border-top-width
-      - border-right-width
-      - border-bottom-width
-      - border-left-width
-      - border-radius
-      - border-top-right-radius
-      - border-bottom-right-radius
-      - border-bottom-left-radius
-      - border-top-left-radius
-      - border-radius-topright
-      - border-radius-bottomright
-      - border-radius-bottomleft
-      - border-radius-topleft
-      - background
-      - background-attachment
-      - background-color
-      - background-image
-      - background-position
-      - background-repeat
-      - background-size
       - filter
     ignore_unspecified: false
     separate_groups: false
