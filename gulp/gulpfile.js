@@ -3,6 +3,8 @@ var gulp       = require('gulp');
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
 var imageop = require('gulp-image-optimization');
+/* Scss Ordering */
+var scsslint = require('gulp-scss-lint');
 /* Generate css & Minify it */
 var minifyCss = require('gulp-minify-css');
 var sass = require('gulp-sass');
@@ -47,6 +49,13 @@ gulp.task('js', function() {
     .pipe(gulp.dest(jsDst));
 });
 
+gulp.task('scss-lint', function() {
+  return gulp.src(scssSrc)
+    .pipe(scsslint({
+      'config': 'scss-lint.yml'
+    }));
+});
+
 /* Generate css & minify it */
 gulp.task('sass', function () {
   return gulp.src(scssSrc)
@@ -65,4 +74,4 @@ gulp.task('watch', function () {
 
 
 // Default gulp task (Task listed here will run on gulp)
-gulp.task('default', ['js', 'sass', 'watch'], function() {});
+gulp.task('default', ['js', 'scss-lint', 'sass', 'watch'], function() {});
