@@ -20,7 +20,8 @@ var imgSrc     = './../themes/custom/saurabhd/src/images/*',
 var jsSrc      = './../themes/custom/saurabhd/src/js/**/*.js',
     jsDst      = './../themes/custom/saurabhd/js';
 
-var scssSrc    = './../themes/custom/saurabhd/src/sass/**/*',
+var bootstrapscssSrc    = './../themes/custom/saurabhd/src/bootstrap/**/*',
+    scssSrc    = './../themes/custom/saurabhd/src/sass/**/*',
     cssDst     = './../themes/custom/saurabhd/css';
 
 /* Minify & Optimize Image */
@@ -45,7 +46,6 @@ gulp.task('image', function() {
 gulp.task('js', function() {
   return gulp.src(jsSrc)
     .pipe(uglify())
-    .pipe(concat('script.js'))
     .pipe(gulp.dest(jsDst));
 });
 
@@ -58,7 +58,7 @@ gulp.task('scss-lint', function() {
 
 /* Generate css & minify it */
 gulp.task('sass', function () {
-  return gulp.src(scssSrc)
+  return gulp.src([bootstrapscssSrc, scssSrc])
     /* Generate css from sass */
     .pipe(sass().on('error', sass.logError))
     /* Minify css */
@@ -74,4 +74,4 @@ gulp.task('watch', function () {
 
 
 // Default gulp task (Task listed here will run on gulp)
-gulp.task('default', ['js', 'scss-lint', 'sass', 'watch'], function() {});
+gulp.task('default', ['js', 'sass', 'watch'], function() {}); // 'scss-lint', 'image'
