@@ -76,13 +76,26 @@ a,
     text-transform: uppercase;
     letter-spacing: 1px;
   }
-}
-.title-info .title-text {
-  color: $black;
-  font-family: $lato-light;
-  font-size: 48px;
+  .title-text {
+    color: $black;
+    font-family: $lato-light;
+    font-size: 48px;
+    margin: 0 0 60px 0;
+  }
 }
 /* End */
+
+/* view content */
+#block-views-block-portfolio-block-1 {
+  h2 {
+    max-width: 850px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 10px auto;
+  }
+}
+/* End */
+
 
 /* Wrap content*/
 .content-section {
@@ -114,10 +127,11 @@ a,
     vertical-align: middle;
     .arrow:after {
       display:inline-block;
-
       height: 32px;
       width: 32px;
       background-image: url('../images/cross.png');
+      background-size: auto 100%;
+      background-repeat: no-repeat;
       content: "";
     }
     &.collapsed {
@@ -177,7 +191,7 @@ a,
   }
 }
 
-.contact-email {
+#block-getintouch {
   a {
     display: inline-block;
     padding: 25px 0 0;
@@ -302,7 +316,7 @@ a,
 @media screen and (max-width: $mobile) {
 /* --- Mobile landscape & portrait view (max-width: 767) --- */
   .wrap-link .expand-link,
-  .contact-email a {
+  #block-getintouch a {
     font-size: 28px;
   }
   .wrap-info .column {
@@ -314,11 +328,19 @@ a,
   .title-info h1 {
     font-size: 27px;
   }
+  .wrap-link .expand-link.collapsed .arrow:after {
+    width: 32px;
+    height: 20px;
+  }
+  .wrap-link .expand-link .arrow:after {
+    width: 25px;
+    height: 25px;
+  }
 } /* 767 */
 
 @media screen and (max-width: $mobile-portrait) {
 /* --- Mobile portrait view only (max-width: 480) --- */
-  .contact-email a {
+  #block-getintouch a {
     font-size: 20px;
   }
   .tab-content {
