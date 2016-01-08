@@ -26,6 +26,8 @@ $assets_path: "../..";
 #block-saurabhd-branding {
   float: left;
   .logo {
+    display: inline-block;
+    width: auto;
     text-decoration: none;
     line-height: normal;
     .logo-txt {

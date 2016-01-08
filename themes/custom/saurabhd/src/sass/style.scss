@@ -310,6 +310,27 @@ a,
 
 
 /**
+ * Login page
+ */
+#block-saurabhd-local-tasks {
+  ul {
+    padding: 30px 0;
+    list-style: none;
+    text-align: center;
+    li {
+      display: inline-block;
+      padding: 0 10px;
+      a {
+        color: $green;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+/* End */
+
+/**
  * Responsive design
  */
 

@@ -25,15 +25,22 @@
   @include transition(all 0.3s ease 0s);
   &.active {
     display: inline-block;
-    padding-right: 50px;
-    background-image: url("../images/down-arrow.png");
-    background-position: right 15px center;
-    background-repeat: no-repeat;
-    background-size: 20px 12px;
-    content: "";
-    &:hover {
-      z-index: 999;
-      background-image: url("../images/down-arrow-white.png");
+    &:after {
+      display:inline-block;
+      height: 12px;
+      width: 20px;
+      margin: 0 7px;
+      background-image: url("../images/down-arrow.png");
+      background-position: right center;
+      background-repeat: no-repeat;
+      background-size: 20px 12px;
+      content: "";
+    }
+     &:hover {
+      &:after {
+        z-index: 999;
+        background-image: url("../images/down-arrow-white.png");
+      }
     }
   }
   &:hover {
@@ -41,7 +48,7 @@
     color: $white;
     text-decoration: none;
   }
-  &:after {
+  &:before {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -54,7 +61,7 @@
     @include transform(translateX(-50%) translateY(-50%));
     @include transition(all 0.5s ease 0s);
   }
-  &:hover:after {
+  &:hover:before {
     width: 101%;
     opacity: 1;
   }
@@ -117,3 +124,52 @@
   }
 }
 /* End */
+
+/* Label design */
+form {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 50px 0;
+  .form-item {
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  label {
+    min-width: 150px;
+    font-family: $lato-bold;
+    font-size: 20px;
+  }
+  input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    @include border-radius(4px);
+  }
+  .description {
+    display: inline-block;
+    width: 100%;
+    padding-left: 155px;
+  }
+  .form-actions {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    .form-submit {
+      position: relative;
+      padding: 10px 55px;
+      border: 2px solid $black;
+      color: $green;
+      background-color: $white;
+      font-size: 22px;
+      text-transform: capitalize;
+      @include border-radius(0);
+      @include transition(all 0.3s ease 0s);
+      &:hover {
+        background-color: $green;
+        color: $white;
+        @include transition(all 0.3s ease 0s);
+      }
+    }
+  }
+}
+
