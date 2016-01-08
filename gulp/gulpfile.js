@@ -70,6 +70,7 @@ gulp.task('sass', function () {
 /* Autodetect changes in sass & generate css accordingly */
 gulp.task('watch', function () {
   gulp.watch(scssSrc, ['sass']);
+  gulp.watch(jsSrc, ['js']);
 });
 
 
