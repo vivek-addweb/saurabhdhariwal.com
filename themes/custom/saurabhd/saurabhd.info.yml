@@ -6,6 +6,7 @@ core: '8.x'
 # Define regions
 regions:
   header: 'Header'
+  header_right: 'Header Right'
   content: 'Main content'
   content_bottom: 'Content Bottom'
   footer: 'Footer'

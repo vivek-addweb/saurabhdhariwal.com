@@ -44,7 +44,7 @@ $assets_path: "../..";
     }
   }
 }
-.social-media {
+#block-socialmedia {
   float: right;
   padding: 0;
   margin: 0;
@@ -65,7 +65,7 @@ $assets_path: "../..";
          @include transform(scale(1.2));
         }
       }
-    &.blog-li a {
+    &:nth-child(1) a {
       display: inline-block;
       width: auto;
       text-indent: 1px;
@@ -77,13 +77,13 @@ $assets_path: "../..";
         @include transform(scale(1));
       }
     }
-    &.twit-li a {
+    &:nth-child(2) a {
       background-image: url('../images/twitter-icon.png');
     }
-    &.linkedin-li a {
+    &:nth-child(3) a {
       background-image: url('../images/likedin-icon.png');
     }
-    &.d8-li a {
+    &:nth-child(4) a {
       background-image: url('../images/drupal8-icon.png');
     }
   }
