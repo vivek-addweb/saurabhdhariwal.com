@@ -65,7 +65,7 @@ $assets_path: "../..";
          @include transform(scale(1.2));
         }
       }
-    &:nth-child(1) a {
+    /*&:nth-child(1) a {
       display: inline-block;
       width: auto;
       text-indent: 1px;
@@ -76,15 +76,21 @@ $assets_path: "../..";
         color: $green;
         @include transform(scale(1));
       }
-    }
-    &:nth-child(2) a {
+    }*/
+    &:nth-child(1) a {
       background-image: url('../images/twitter-icon.png');
     }
-    &:nth-child(3) a {
+    &:nth-child(2) a {
       background-image: url('../images/likedin-icon.png');
     }
-    &:nth-child(4) a {
+    &:nth-child(3) a {
       background-image: url('../images/drupal8-icon.png');
+    }
+    &:nth-child(4) a {
+      background-image: url('../images/git.png');
+    }
+    &:nth-child(5) a {
+      background-image: url('../images/stackoverflow.png');
     }
   }
 }

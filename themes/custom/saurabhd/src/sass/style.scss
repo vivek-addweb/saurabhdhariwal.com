@@ -198,16 +198,19 @@ a,
 }
 
 #block-getintouch {
-  a {
-    display: inline-block;
-    padding: 25px 0 0;
-    color: $black;
-    border-bottom: 1px solid $black;
-    font-family: $lato-light;
-    font-size: 48px;
-    line-height: 44px;
-    text-decoration: none;
-    text-transform: capitalize;
+  h5 {
+    a {
+      display: inline-block;
+      margin-top: -20px;
+      padding: 0;
+      color: $black;
+      border-bottom: 1px solid $black;
+      font-family: $lato-light;
+      font-size: 48px;
+      line-height: 44px;
+      text-decoration: none;
+      text-transform: capitalize;
+    }
   }
 }
 /* End */
@@ -347,7 +350,7 @@ a,
 @media screen and (max-width: $mobile) {
 /* --- Mobile landscape & portrait view (max-width: 767) --- */
   .wrap-link .expand-link,
-  #block-getintouch a {
+  #block-getintouch h5 a {
     font-size: 28px;
   }
   .wrap-info .column {
@@ -371,7 +374,7 @@ a,
 
 @media screen and (max-width: $mobile-portrait) {
 /* --- Mobile portrait view only (max-width: 480) --- */
-  #block-getintouch a {
+  #block-getintouch h5 a {
     font-size: 20px;
   }
   .tab-content {
