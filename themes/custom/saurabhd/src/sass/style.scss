@@ -198,6 +198,11 @@ a,
 }
 
 #block-getintouch {
+  p {
+    img{
+      margin: 24px 0 !important;
+    }
+  }
   h5 {
     a {
       display: inline-block;
@@ -209,7 +214,6 @@ a,
       font-size: 48px;
       line-height: 44px;
       text-decoration: none;
-      text-transform: capitalize;
     }
   }
 }
