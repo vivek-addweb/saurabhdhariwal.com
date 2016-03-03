@@ -228,6 +228,7 @@ a,
     float: none;
     display: inline-block;
     a {
+      padding: 5px;
       border: 0;
       background-color: transparent;
       opacity: 0.5;
@@ -303,6 +304,12 @@ a,
     .frame-footer .lbl {
       bottom: -22px;
       font-size: 12px;
+    }
+  }
+  #carousel-example-generic {
+    img {
+      max-width: 100%;
+      height: auto;
     }
   }
 }
