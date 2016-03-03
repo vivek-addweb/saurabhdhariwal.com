@@ -103,7 +103,7 @@ $assets_path: "../..";
 @media screen and (max-width: $mobile-portrait) {
 /* --- Mobile portrait view only (max-width: 480) --- */
   .navbar {
-    height: 120px;
+    height: 100px;
     padding-right: 40px;
     text-align: center;
   }
@@ -116,5 +116,14 @@ $assets_path: "../..";
     float: none;
     display: inline-block;
     padding-top: 10px;
+  }
+  #block-socialmedia {
+    float: none;
+    display: inline-block;
+    margin-top: 10px;
+    text-align: center;
+    ul {
+      padding: 0;
+    }
   }
 } /* 480 */
