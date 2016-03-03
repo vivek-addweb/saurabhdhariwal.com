@@ -713,9 +713,9 @@ $settings['container_yamls'][] = __DIR__ . '/services.yml';
 #   include __DIR__ . '/settings.local.php';
 # }
 $databases['default']['default'] = array (
-  'database' => 'saurabhd',
+  'database' => 'saurabhd_one',
   'username' => 'root',
-  'password' => '',
+  'password' => 'root',
   'prefix' => '',
   'host' => 'localhost',
   'port' => '3306',
