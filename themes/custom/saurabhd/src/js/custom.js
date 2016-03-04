@@ -4,5 +4,8 @@ jQuery(document).ready(function(){
   jQuery('.bts-img-slider > .carousel > ul > li').addClass('carousel-item');
   jQuery('.bts-img-slider > .carousel > ul > li:first-child').addClass('active');
   // End
+
+  //Menu open new tab
+  jQuery('#block-socialmedia ul li a').attr("target","_blank");
 });
 
