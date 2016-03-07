@@ -5,7 +5,17 @@ jQuery(document).ready(function(){
   jQuery('.bts-img-slider > .carousel > ul > li:first-child').addClass('active');
   // End
 
-  //Menu open new tab
+  // Show slider arrows on when it has more than one slide
+  jQuery('ul.carousel-inner').each(function(){
+    var len = jQuery(this).find('li').length;
+    if(len < 2){
+      jQuery(this).parent().find('.left.carousel-control').hide();
+      jQuery(this).parent().find('.right.carousel-control').hide();
+    }
+  });
+  // End
+
+  // Menu open new tab
   jQuery('#block-socialmedia ul li a').attr("target","_blank");
 });
 
